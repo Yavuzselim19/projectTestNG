@@ -6,7 +6,6 @@ import myapp.utilities.ConfigReader;
 import myapp.utilities.Driver;
 import myapp.utilities.WaitUtils;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertTrue;
