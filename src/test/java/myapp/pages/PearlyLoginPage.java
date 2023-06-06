@@ -20,4 +20,31 @@ public class PearlyLoginPage {
 
     @FindBy(name = "login")
     public WebElement loginButton;
+
+    @FindBy(linkText = "Register")
+    public WebElement registerButton;
+
+    @FindBy(xpath="//input[@id='reg_username']")
+    public WebElement userNameEntry;
+
+    @FindBy(id="reg_email")
+    public WebElement userEMailEntry;
+
+    @FindBy(id="reg_password")
+    public WebElement passwordEntry;
+
+    @FindBy(id="register-policy")
+    public WebElement checkBox;
+
+    @FindBy (xpath="//button[@name='register']")
+
+    public WebElement signUpButton;
+
+    @FindBy (xpath="(//p[@class='submit-status'])[2]")
+    public WebElement submitStatusMessage;
+
+
+
+
+
 }
