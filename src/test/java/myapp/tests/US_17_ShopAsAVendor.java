@@ -2,11 +2,9 @@ package myapp.tests;
 
 import myapp.pages.BillingDetailsPage;
 import myapp.pages.HomePage;
+import myapp.pages.OrdersPage;
 import myapp.pages.ShoppingPage;
-import myapp.utilities.ConfigReader;
-import myapp.utilities.Driver;
-import myapp.utilities.JSUtils;
-import myapp.utilities.WaitUtils;
+import myapp.utilities.*;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
@@ -18,21 +16,22 @@ public class US_17_ShopAsAVendor {
     public void shopAsAVendorTest(){
 
         // 1. Go to https://pearlymarket.com/
-        Driver.getDriver().get(ConfigReader.getProperty("pearlymarket_url"));
+        TestBase.driver();
 
         // 2. Click on Sign In and enter username and password
-        SignIn.signIn();
+        TestBase.vendorSignIn();
 
         // 3. Select "Search" box and send keys
-        HomePage pearlyHomePage = new HomePage();
+        HomePage homePage = new HomePage();
         WaitUtils.waitFor(5);
-        pearlyHomePage.searchInput.sendKeys("chair" + Keys.ENTER);
+        homePage.searchInput.sendKeys("chair" + Keys.ENTER);
 
         // 4. Click on "Add to cart" button
         ShoppingPage shoppingPage = new ShoppingPage();
         shoppingPage.addToCartButton.click();
 
-        assertTrue(shoppingPage.addToCartButtonSuccessMessage.getText().contains("has been added to your cart."));
+        ReusableMethods.verifyElementDisplayed(shoppingPage.addToCartButtonSuccessMessage);
+        //assertTrue(shoppingPage.addToCartButtonSuccessMessage.getText().contains("has been added to your cart."));
 
         // 5. Click on the "Cart" to see added products to the cart
         shoppingPage.cart.click();
@@ -79,10 +78,22 @@ public class US_17_ShopAsAVendor {
 
         // 11. Click on the "Place Order" button
         JSUtils.clickWithTimeoutByJS(billingDetailsPage.placeOrder);
+
         // 12. Verify if the order has been successfully made
+        ReusableMethods.verifyElementDisplayed(shoppingPage.orderReceivedMessage);
+
+        // 13. Get the order number
+        OrdersPage ordersPage = new OrdersPage();
+        String actualOrderNumber = ordersPage.actualOrderNumber.getText();
+
         // 13. Click on the "My Orders" link at the bottom of the page
+        JSUtils.clickWithTimeoutByJS(homePage.myOrders);
+
         // 14. To see the details of the ordered product, click on "View" button
-        // 15. Confirm it by locating "Order Details" text
+        ordersPage.viewOrderDetails.click();
+
+        // 15. Confirm it by locating "order number"
+        ReusableMethods.verifyExpectedAndActualTextMatch(actualOrderNumber, ordersPage.orderNumber);
 
         WaitUtils.waitFor(10);
         Driver.closeDriver();

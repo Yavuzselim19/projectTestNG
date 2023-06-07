@@ -20,5 +20,22 @@ public class HomePage {
     @FindBy(xpath = "//input[@aria-label='Search']")
     public WebElement searchInput;
 
+    @FindBy(xpath = "//span[.='Sign Out']")
+    public WebElement signOut;
+
+    @FindBy(linkText = "Log out")
+    public WebElement logOut;
+
+    // LINKS at the bottom page
+    @FindBy(linkText = "Cart")
+    public WebElement cart;
+
+    @FindBy(linkText = "My Orders")
+    public WebElement myOrders;
+
+    @FindBy(linkText = "Wishlist")
+    public WebElement wishlist;
+    @FindBy(linkText = "My Account")
+    public WebElement myAccount;
 
 }
