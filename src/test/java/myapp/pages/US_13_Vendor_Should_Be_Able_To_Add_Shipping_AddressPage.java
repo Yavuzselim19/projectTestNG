@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US_08_User_Adds_Items_To_WishListPage {
+public class US_13_Vendor_Should_Be_Able_To_Add_Shipping_AddressPage {
 
-    public US_08_User_Adds_Items_To_WishListPage(){
+    public US_13_Vendor_Should_Be_Able_To_Add_Shipping_AddressPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
