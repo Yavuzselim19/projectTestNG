@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import myapp.utilities.Driver;
 
-public class PearlyHomePage {
-    public PearlyHomePage() {
+public class HomePage {
+    public HomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
