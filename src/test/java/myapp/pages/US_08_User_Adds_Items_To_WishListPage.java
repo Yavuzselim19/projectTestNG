@@ -11,7 +11,6 @@ public class US_08_User_Adds_Items_To_WishListPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
     @FindBy(id = "reg_username")
     public WebElement usernameTestBox;
 
