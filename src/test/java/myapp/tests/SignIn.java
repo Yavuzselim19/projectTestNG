@@ -14,7 +14,7 @@ public class SignIn {
 
         pearlyHomePage.signIn.click();
 
-        pearlyLoginPage.username.sendKeys(ConfigReader.getProperty("username"));
+        pearlyLoginPage.username.sendKeys(ConfigReader.getProperty("vendor_username"));
         pearlyLoginPage.password.sendKeys(ConfigReader.getProperty("password"));
         pearlyLoginPage.rememberMe.click();
         pearlyLoginPage.loginButton.click();
