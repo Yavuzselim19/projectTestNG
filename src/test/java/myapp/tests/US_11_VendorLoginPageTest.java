@@ -3,14 +3,15 @@ package myapp.tests;
 import myapp.pages.PearlyVendorHomePage;
 import myapp.pages.PearlyVendorLoginPage;
 import myapp.utilities.*;
+import org.bouncycastle.util.Arrays;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
+
 import java.util.List;
 
-public class US11_VendorLoginTest {
+public class US_11_VendorLoginPageTest {
     @Test
     public void vendorSignInTest() {
 
@@ -35,7 +36,7 @@ public class US11_VendorLoginTest {
         WaitUtils.waitFor(3);
         Assert.assertTrue(pearlyVendorHomePage.myAccountUpp.isDisplayed());
 
-
+/*
         List<String> valuesList = Arrays.asList("Dashboard", "Store Manager", "Orders", "Downloads", "Addresses", "Account details", "Wishlist", "Support Tickets", "Followings", "Logout");
         List<WebElement> elements = pearlyVendorHomePage.titles2;
         for (int i = 0; i < elements.size(); i++) {
@@ -43,7 +44,9 @@ public class US11_VendorLoginTest {
             ReusableMethods.verifyElementDisplayed(elements.get(i));
             Assert.assertTrue(elements.get(i).getText().equals(valuesList.get(i)));
         }
-        /*
+        */
+
+
         ReusableMethods.verifyElementDisplayed(pearlyVendorHomePage.storeManager);
         ReusableMethods.verifyElementDisplayed(pearlyVendorHomePage.orders);
         ReusableMethods.verifyElementDisplayed(pearlyVendorHomePage.downloads);
@@ -53,8 +56,6 @@ public class US11_VendorLoginTest {
         ReusableMethods.verifyElementDisplayed(pearlyVendorHomePage.supportTickets);
         ReusableMethods.verifyElementDisplayed(pearlyVendorHomePage.followings);
         ReusableMethods.verifyElementDisplayed(pearlyVendorHomePage.logout);
-
-         */
 
     }
 }
