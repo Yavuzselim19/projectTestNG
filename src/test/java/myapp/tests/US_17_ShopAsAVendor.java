@@ -40,8 +40,6 @@ public class US_17_ShopAsAVendor {
         //pearlyShoppingPage.checkout.click();  --> this didn't work, so we clicked with JS Executor
         JSUtils.clickWithTimeoutByJS(shoppingPage.viewCart);
 
-
-
         // 7. Click on "Proceed to Checkout" button
         shoppingPage.proceedToCheckout.click();
 

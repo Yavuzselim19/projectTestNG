@@ -22,9 +22,30 @@ public class ShoppingPage {
     @FindBy(xpath = "//a[@href='https://pearlymarket.com/cart/' and text()='View cart']")
     public WebElement viewCart;
 
+    @FindBy(id = "coupon_code")
+    public WebElement couponCode;
+
+    @FindBy(name = "apply_coupon")
+    public WebElement applyCoupon;
+
+    @FindBy(id = "select2-calc_shipping_country-container")
+    public WebElement shippingCountryContainer;
+
+    @FindBy(id = "select2-calc_shipping_state-container")
+    public WebElement shippingStateContainer;
+
+    @FindBy(id = "calc_shipping_city")
+    public WebElement shippingCity;
+
+    @FindBy(id = "calc_shipping_postcode")
+    public WebElement shippingPostcode;
+
+    @FindBy(name = "calc_shipping")
+    public WebElement updateTotals;
+
     @FindBy(linkText = "Checkout")
     public WebElement checkout;
-    @FindBy(partialLinkText = "Proceed to checkout")
+    @FindBy(xpath = "(//a[@href='https://pearlymarket.com/checkout-2/'])[3]")
     public WebElement proceedToCheckout;
 
 
