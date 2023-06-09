@@ -1,12 +1,11 @@
 package myapp.tests;
 
-import myapp.pages.PearlyHomePage;
-import myapp.pages.PearlyShoppingPage;
+import myapp.pages.HomePage;
+import myapp.pages.ShoppingPage;
 import myapp.utilities.ConfigReader;
 import myapp.utilities.Driver;
 import myapp.utilities.WaitUtils;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertTrue;
@@ -20,30 +19,30 @@ public class US_17_ShopAsAVendor {
         Driver.getDriver().get(ConfigReader.getProperty("pearlymarket_url"));
 
         // 2. Click on Sign In and enter username and password
-        PearlySignIn.signIn();
+        SignIn.signIn();
 
         // 3. Select "Search" box and send keys
-        PearlyHomePage pearlyHomePage = new PearlyHomePage();
+        HomePage homePage = new HomePage();
         WaitUtils.waitFor(5);
-        pearlyHomePage.searchInput.sendKeys("chair" + Keys.ENTER);
+        homePage.searchInput.sendKeys("chair" + Keys.ENTER);
 
         // 4. Click on "Add to cart" button
-        PearlyShoppingPage pearlyShoppingPage = new PearlyShoppingPage();
-        pearlyShoppingPage.addToCartButton.click();
+        ShoppingPage shoppingPage = new ShoppingPage();
+        shoppingPage.addToCartButton.click();
 
-        assertTrue(pearlyShoppingPage.addToCartButtonSuccessMessage.getText().contains("has been added to your cart."));
+        assertTrue(shoppingPage.addToCartButtonSuccessMessage.getText().contains("has been added to your cart."));
 
         // 5. Click on the "Cart" to see added products to the cart
-        pearlyShoppingPage.cart.click();
+        shoppingPage.cart.click();
 
         // 6. Click to "View Cart" link
        //Driver.getDriver().switchTo().frame(pearlyShoppingPage.viewCart);
         //pearlyShoppingPage.viewCart.click();
 
-        pearlyShoppingPage.checkout.click();
+        shoppingPage.checkout.click();
 
         // 7. Click on "Proceed to Checkout" button
-        pearlyShoppingPage.proceedToCheckout.click();
+        shoppingPage.proceedToCheckout.click();
 
         // 8. Send keys to fill Billing Details
         // 9. Click "Pay at the door" option under the Payment Methods

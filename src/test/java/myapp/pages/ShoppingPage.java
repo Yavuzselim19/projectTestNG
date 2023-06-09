@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PearlyShoppingPage {
-    public PearlyShoppingPage() {
+public class ShoppingPage {
+    public ShoppingPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -26,6 +26,21 @@ public class PearlyShoppingPage {
     public WebElement checkout;
     @FindBy(partialLinkText = "Proceed to checkout")
     public WebElement proceedToCheckout;
+
+    @FindBy(id = "select2-calc_shipping_country-container")
+    public WebElement shippingCountryContainer;
+
+    @FindBy(id = "select2-calc_shipping_state-container")
+    public WebElement shippingStateContainer;
+
+    @FindBy(id = "calc_shipping_city")
+    public WebElement shippingCity;
+
+    @FindBy(id = "calc_shipping_postcode")
+    public WebElement shippingPostcode;
+
+    @FindBy(name = "calc_shipping")
+    public WebElement updateTotals;
 
 
 
