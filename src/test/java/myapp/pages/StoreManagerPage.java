@@ -31,7 +31,8 @@ public class StoreManagerPage {
     @FindBy(xpath = "//a[@href='https://pearlymarket.com/store-manager/customers/']")
     public WebElement customers;
 
-
+    @FindBy(xpath = "//*[@id='wcfm_menu']/div[5]/span/a")
+    public WebElement addnew;
 
 
     @FindBy(xpath = "//span[.='Logout']")
