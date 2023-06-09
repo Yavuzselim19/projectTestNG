@@ -62,7 +62,7 @@ public class JSUtils {
     public static String getValueByJS(String idOfElement){
         JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
         String value=js.executeScript("return document.getElementById('"+idOfElement+"').value").toString();
-        System.out.println(value);
+        System.out.println("Value = " + value);
         return value;
 //        How you get the value of an input box?
 //        We can js executor.

@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class Driver {
 //    Driver object
-    private static WebDriver driver;
+    public static WebDriver driver;
 
 //    1. getDriver : setup and instantiate the driver object
     public static WebDriver getDriver(){

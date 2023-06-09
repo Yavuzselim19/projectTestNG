@@ -55,6 +55,8 @@ public class PearlyVendorHomePage {
 
     @FindBy(linkText = "Logout")
     public WebElement logout;
+
+
 }
 
 
