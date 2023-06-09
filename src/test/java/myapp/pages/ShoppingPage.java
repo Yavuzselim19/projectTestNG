@@ -49,6 +49,8 @@ public class ShoppingPage {
     public WebElement proceedToCheckout;
 
 
+    @FindBy(xpath = "//*[.='Thank you. Your order has been received.']")
+    public WebElement orderReceivedMessage;
 
 
 }
