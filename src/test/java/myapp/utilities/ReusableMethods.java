@@ -63,7 +63,7 @@ public class ReusableMethods {
 
 
     //    CHECKBOX BUTTON
-    public void clickCheckboxByIndex(int index){
+    public static void clickCheckboxByIndex(int index){
         int numOfRadio =Driver.getDriver().findElements(By.xpath("//input[@type='checkbox']")).size();
         try{
             for (int i=0;i<numOfRadio;i++){
@@ -222,10 +222,10 @@ public class ReusableMethods {
     }
 
     //    ALERT
-    public void acceptAlert() throws InterruptedException {
+    public static void acceptAlert() throws InterruptedException {
         Driver.getDriver().switchTo().alert().accept();
     }
-    public void dismissAlert() throws InterruptedException {
+    public static void dismissAlert() throws InterruptedException {
         Driver.getDriver().switchTo().alert().accept();
     }
     //    IFRAME
@@ -266,6 +266,13 @@ public class ReusableMethods {
     public static void hoverOverOnElementActions(WebElement element) {
         //        Actions actions = new Actions(driver);
         new Actions(Driver.getDriver()).moveToElement(element).perform();
+    }
+
+    //    ACTIONS_END
+    public static void pageEnd(){
+        //        Actions actions = new Actions(driver);
+        new Actions(Driver.getDriver()).sendKeys(Keys.END).perform();
+
     }
     //    ACTIONS_SCROLL_DOWN
     public static void scrollDownActions() {

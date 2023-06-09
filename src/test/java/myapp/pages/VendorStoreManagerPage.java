@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class VendorStoreManagerPage {
+
     public VendorStoreManagerPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -18,6 +19,7 @@ public class VendorStoreManagerPage {
 
     @FindBy(xpath = "//a[.='Add New']")
     public WebElement addNew;
+
 
 
 
