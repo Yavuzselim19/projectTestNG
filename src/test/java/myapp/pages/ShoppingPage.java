@@ -28,11 +28,11 @@ public class ShoppingPage {
     @FindBy(name = "apply_coupon")
     public WebElement applyCoupon;
 
-    @FindBy(id = "select2-calc_shipping_country-container")
-    public WebElement shippingCountryContainer;
+    @FindBy(id = "calc_shipping_country")
+    public WebElement shippingCountryDropDown;
 
-    @FindBy(id = "select2-calc_shipping_state-container")
-    public WebElement shippingStateContainer;
+    @FindBy(id = "calc_shipping_state")
+    public WebElement shippingStateDropDown;
 
     @FindBy(id = "calc_shipping_city")
     public WebElement shippingCity;
