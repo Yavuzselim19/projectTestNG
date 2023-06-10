@@ -8,9 +8,7 @@ import myapp.utilities.*;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertTrue;
-
-public class US_17_ShopAsAVendor {
+public class US_20_ShopAsAVendorWithCoupon {
 
     @Test
     public void shopAsAVendorTest(){
@@ -100,10 +98,4 @@ public class US_17_ShopAsAVendor {
         WaitUtils.waitFor(10);
         Driver.closeDriver();
     }
-
-
-
-
-
-
 }

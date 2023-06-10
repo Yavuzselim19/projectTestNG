@@ -63,7 +63,7 @@ public class ReusableMethods {
 
 
     //    CHECKBOX BUTTON
-    public void clickCheckboxByIndex(int index){
+    public static void clickCheckboxByIndex(int index){
         int numOfRadio =Driver.getDriver().findElements(By.xpath("//input[@type='checkbox']")).size();
         try{
             for (int i=0;i<numOfRadio;i++){
@@ -211,21 +211,21 @@ public class ReusableMethods {
         }
     }
     // VERIFY IS EXPECTED AND ACTUAL TEXTS ARE MATCHING
-    public static void verifyExpectedAndActualTextMatch(String expectedText,WebElement actualElement){
+    public static void verifyExpectedAndActualTextMatch(String expectedText, WebElement actualElement){
         try{
     //    Just in case there is a synchronization issue, handle it first then get the text
             WaitUtils.waitForVisibility(actualElement,10);
-            assertEquals(expectedText,actualElement.getText());
+            assertEquals(expectedText, actualElement.getText());
         }catch (NoSuchElementException e){
             e.printStackTrace();
         }
     }
 
     //    ALERT
-    public void acceptAlert() throws InterruptedException {
+    public static void acceptAlert() throws InterruptedException {
         Driver.getDriver().switchTo().alert().accept();
     }
-    public void dismissAlert() throws InterruptedException {
+    public static void dismissAlert() throws InterruptedException {
         Driver.getDriver().switchTo().alert().accept();
     }
     //    IFRAME
@@ -267,6 +267,14 @@ public class ReusableMethods {
         //        Actions actions = new Actions(driver);
         new Actions(Driver.getDriver()).moveToElement(element).perform();
     }
+
+    //    ACTIONS_END
+    public static void pageEnd(){
+        //        Actions actions = new Actions(driver);
+        new Actions(Driver.getDriver()).sendKeys(Keys.END).perform();
+
+    }
+
     //    ACTIONS_SCROLL_DOWN
     public static void scrollDownActions() {
         //        Actions actions = new Actions(driver);

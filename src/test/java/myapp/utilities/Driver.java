@@ -49,6 +49,7 @@ public class Driver {
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
+        //driver.manage().deleteAllCookies();
         return driver;
     }
 //    2. closeDriver : quits the driver
