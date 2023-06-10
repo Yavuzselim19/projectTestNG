@@ -72,5 +72,6 @@ public class JSUtils {
 //        I have to do this, cause getText in this case does not return teh text in an input
 //        EG: getValueByJS("hotelDates")
     }
+
 }
 
