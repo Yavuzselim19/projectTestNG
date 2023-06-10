@@ -39,6 +39,8 @@ public class US_20_ShopAsAVendorWithCoupon {
         JSUtils.clickWithTimeoutByJS(shoppingPage.viewCart);
 
         // 7. Fill shipping details
+        ReusableMethods.selectByValue(shoppingPage.shippingCountryDropDown, "US");
+        ReusableMethods.selectByVisibleText(shoppingPage.shippingStateDropDown, "Hawaii");
         shoppingPage.shippingCity.clear();
         shoppingPage.shippingCity.sendKeys("Austin");
         shoppingPage.shippingPostcode.clear();
