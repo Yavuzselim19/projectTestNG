@@ -52,5 +52,16 @@ public class ShoppingPage {
     @FindBy(xpath = "//*[.='Thank you. Your order has been received.']")
     public WebElement orderReceivedMessage;
 
+    @FindBy(xpath ="(//a[@title='Compare'])[1]")
+        public WebElement compare;
+
+    @FindBy(xpath ="//a[normalize-space()='Start Compare !']")
+    public WebElement startCompare;
+
+    @FindBy(xpath ="(//i[@class='w-icon-times-solid'])[1]")
+    public WebElement removeProducts1;
+
+    @FindBy(xpath ="(//i[@class='w-icon-times-solid'])[3]")
+    public WebElement removeProducts2;
 
 }
