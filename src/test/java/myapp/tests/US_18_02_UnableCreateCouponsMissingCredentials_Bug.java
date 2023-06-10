@@ -7,11 +7,10 @@ import myapp.utilities.ConfigReader;
 import myapp.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US18_01_CreateCouponsCorrectCredentials {
+public class US_18_02_UnableCreateCouponsMissingCredentials_Bug {
 
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -31,9 +30,7 @@ public class US18_01_CreateCouponsCorrectCredentials {
 
         couponPage.codeInput.sendKeys("CPN001");
         couponPage.descriptionTextArea.sendKeys("This coupon discounts the product by percentage");
-        couponPage.couponAmount.click();
-        couponPage.couponAmount.sendKeys(Keys.BACK_SPACE);
-        couponPage.couponAmount.sendKeys("100");
+
         couponPage.couponExpiryDate.sendKeys("2023-12-31");
         couponPage.allowFreeShipping.click();
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
@@ -43,8 +40,7 @@ public class US18_01_CreateCouponsCorrectCredentials {
         couponPage.submitButton.click();
 
         Thread.sleep(3000);
-        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//span[text()='Percentage discount']")).getText().equals("Percentage discount"));
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//span[text()='Percentage discount']")).getText().equals("Amount should be at least 1"));
 
     }
-
 }

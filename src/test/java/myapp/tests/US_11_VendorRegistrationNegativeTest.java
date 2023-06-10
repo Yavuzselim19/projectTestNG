@@ -9,7 +9,7 @@ import myapp.utilities.WaitUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US11_VendorRegistrationNegativeTest {
+public class US_11_VendorRegistrationNegativeTest {
 
     @Test
     public void vendorLoginNegativeTest(){

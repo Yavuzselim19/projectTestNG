@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US16_AddSimpleProductAsAVendor {
+public class US_16_AddSimpleProductAsAVendor {
 
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
