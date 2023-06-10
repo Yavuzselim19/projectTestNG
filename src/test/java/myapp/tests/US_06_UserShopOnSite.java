@@ -58,26 +58,11 @@ public class US_06_UserShopOnSite {
         WebElement thank_you = Driver.getDriver().findElement(By.xpath("//p[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']"));
 
         Assert.assertTrue(thank_you.isDisplayed());
-
-
-
-
-
-
-
-
-
-
-
-
-
         Thread.sleep(5000);
         Driver.closeDriver();
-
-
-
-
     }
+
+
 
 
 
