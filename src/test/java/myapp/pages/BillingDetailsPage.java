@@ -19,8 +19,8 @@ public class BillingDetailsPage {
     @FindBy(id = "billing_company")
     public WebElement billingCompany;
 
-    @FindBy(id = "select2-billing_country-container")
-    public WebElement billingCountryContainer;
+    @FindBy(id = "billing_country")
+    public WebElement billingCountryDropDown;
 
     @FindBy(id = "billing_address_1")
     public WebElement billingAddress1;
@@ -28,11 +28,12 @@ public class BillingDetailsPage {
     @FindBy(id = "billing_address_2")
     public WebElement billingAddress2;
 
+
     @FindBy(id = "billing_city")
     public WebElement billingCity;
 
-    @FindBy(id = "select2-billing_state-container")
-    public WebElement billingStateContainer;
+    @FindBy(id = "billing_state")
+    public WebElement billingStateDropDown;
 
     @FindBy(id = "billing_postcode")
     public WebElement billingPostcode;
@@ -57,4 +58,17 @@ public class BillingDetailsPage {
 
     @FindBy(id = "place_order")
     public WebElement placeOrder;
+
+    @FindBy(id = "coupon_code")
+    public WebElement couponCode;
+
+    @FindBy(name = "apply_coupon")
+    public WebElement applyCoupon;
+
+    @FindBy(className = "showcoupon")
+    public WebElement enterYourCode;
+
+
 }
+
+

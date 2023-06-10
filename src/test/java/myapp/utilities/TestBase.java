@@ -16,12 +16,13 @@ public class TestBase {
     public static void userSignIn(){
 
         homePage.signIn.click();
-        loginPage.username.sendKeys(ConfigReader.getProperty("username"));
-        loginPage.password.sendKeys(ConfigReader.getProperty("password"));
+        loginPage.username.sendKeys(ConfigReader.getProperty("username2"));
+        loginPage.password.sendKeys(ConfigReader.getProperty("password2"));
         loginPage.rememberMe.click();
         loginPage.loginButton.click();
 
     }
+
 
     public static void vendorSignIn(){
 

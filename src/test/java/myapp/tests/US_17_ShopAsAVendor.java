@@ -41,6 +41,8 @@ public class US_17_ShopAsAVendor {
         JSUtils.clickWithTimeoutByJS(shoppingPage.viewCart);
 
         // 7. Fill shipping details
+        ReusableMethods.selectByValue(shoppingPage.shippingCountryDropDown, "US");
+        ReusableMethods.selectByVisibleText(shoppingPage.shippingStateDropDown, "Hawaii");
         shoppingPage.shippingCity.clear();
         shoppingPage.shippingCity.sendKeys("Austin");
         shoppingPage.shippingPostcode.clear();
@@ -98,10 +100,6 @@ public class US_17_ShopAsAVendor {
         WaitUtils.waitFor(10);
         Driver.closeDriver();
     }
-
-
-
-
 
 
 }

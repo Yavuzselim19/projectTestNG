@@ -4,8 +4,6 @@ import myapp.pages.HomePage;
 import myapp.pages.LoginPage;
 import myapp.utilities.ConfigReader;
 import myapp.utilities.Driver;
-import myapp.utilities.TestBase;
-import org.testng.annotations.Test;
 
 public class SignIn {
     // @Test => commented for using below method in another classes.

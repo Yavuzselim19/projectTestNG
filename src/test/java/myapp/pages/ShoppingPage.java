@@ -11,7 +11,8 @@ public class ShoppingPage {
     }
 
     @FindBy(name = "add-to-cart")
-    public WebElement addToCartButton;
+    public static WebElement addToCartButton;
+
 
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement addToCartButtonSuccessMessage;
@@ -28,11 +29,11 @@ public class ShoppingPage {
     @FindBy(name = "apply_coupon")
     public WebElement applyCoupon;
 
-    @FindBy(id = "select2-calc_shipping_country-container")
-    public WebElement shippingCountryContainer;
+    @FindBy(id = "calc_shipping_country")
+    public WebElement shippingCountryDropDown;
 
-    @FindBy(id = "select2-calc_shipping_state-container")
-    public WebElement shippingStateContainer;
+    @FindBy(id = "calc_shipping_state")
+    public WebElement shippingStateDropDown;
 
     @FindBy(id = "calc_shipping_city")
     public WebElement shippingCity;
@@ -51,6 +52,14 @@ public class ShoppingPage {
 
     @FindBy(xpath = "//*[.='Thank you. Your order has been received.']")
     public WebElement orderReceivedMessage;
+
+    @FindBy(xpath = "//button[@title='Minus']")
+    public WebElement minusButton;
+    @FindBy(xpath = "//button[@title='Plus']")
+    public WebElement plusButton;
+
+    @FindBy(name = "update_cart")
+    public WebElement updateCart;
 
 
 }

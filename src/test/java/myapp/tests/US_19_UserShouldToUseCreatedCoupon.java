@@ -1,14 +1,18 @@
 package myapp.tests;
 
+import myapp.pages.BillingDetailsPage;
 import myapp.pages.HomePage;
+import myapp.pages.LoginPage;
 import myapp.pages.ShoppingPage;
 import myapp.utilities.*;
-import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_06_UserShopOnSite {
+public class US_19_UserShouldToUseCreatedCoupon {
     @Test
     public void userShouldBeAbleToShopOnTheSite() {
         // 1. Go to https://pearlymarket.com/
@@ -37,6 +41,14 @@ public class US_06_UserShopOnSite {
         JSUtils.clickWithTimeoutByJS(shoppingPage1.updateCart);
         JSUtils.clickWithTimeoutByJS(shoppingPage1.proceedToCheckout);
         //User should be able to see the Billing Address in order to purchase the products
+        BillingDetailsPage billingDetailsPage = new BillingDetailsPage();
+        JSUtils.clickWithTimeoutByJS(billingDetailsPage.enterYourCode);
+        billingDetailsPage.couponCode.sendKeys("BNM123");
+        JSUtils.clickWithTimeoutByJS(billingDetailsPage.applyCoupon);
+        billingDetailsPage.billingFirstName.sendKeys("Yavuz");
+        billingDetailsPage.billingLastName.sendKeys("Akcakoyun");
+        ReusableMethods.selectByValue(billingDetailsPage.billingCountryDropDown, "GB");
+        billingDetailsPage.billingCity.sendKeys("Liverpool");
 
         //The user should be able to view and select payment options.
 

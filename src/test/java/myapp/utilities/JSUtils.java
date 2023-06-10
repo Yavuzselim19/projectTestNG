@@ -42,7 +42,7 @@ public class JSUtils {
    @param String id of teh webelement that we want to locate
    locating element using javascript executor
    and returns that WebElement
-   Note that this is NOT common and we should use 8 locators that we learned in selenium
+   Note that this is NOT commo and we should use 8 locators that we learned in selenium
     */
     public static WebElement locateElementsByJS(String idOfElement){
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -57,7 +57,7 @@ public class JSUtils {
         js.executeScript("arguments[0].setAttribute('value','"+text+"')",inputElement);
     }
     /*
-    param : Id of the the element
+    param : Id of the element
      */
     public static String getValueByJS(String idOfElement){
         JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();

@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import myapp.utilities.Driver;
 
+import static org.openqa.selenium.By.xpath;
+
 public class HomePage {
     public HomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -37,5 +39,9 @@ public class HomePage {
     public WebElement wishlist;
     @FindBy(linkText = "My Account")
     public WebElement myAccount;
+    @FindBy(xpath="//button[@name='add-to-cart']" )
+    public WebElement addToCart;
+
+
 
 }
