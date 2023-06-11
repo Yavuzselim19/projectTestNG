@@ -10,7 +10,14 @@ public class BillingDetailsPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(className = "showcoupon")
+    public WebElement enterYourCode;
 
+    @FindBy(id = "coupon_code")
+    public WebElement couponCode;
+
+    @FindBy(name = "apply_coupon")
+    public WebElement applyCoupon;
 
     @FindBy(id = "billing_first_name")
     public WebElement billingFirstName;
@@ -59,4 +66,8 @@ public class BillingDetailsPage {
 
     @FindBy(id = "place_order")
     public WebElement placeOrder;
+
+
+
+
 }
