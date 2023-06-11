@@ -20,4 +20,7 @@ public class LoginPage {
 
     @FindBy(name = "login")
     public WebElement loginButton;
+
+    @FindBy(linkText = "Become a Vendor")
+    public WebElement becomeVendor;
 }
