@@ -2,9 +2,6 @@ package myapp.tests;
 
 import myapp.pages.*;
 import myapp.utilities.*;
-import org.checkerframework.checker.units.qual.C;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,7 +14,7 @@ public class US_03_AddingBillingAddress {
 
         LoginPage loginPage = new LoginPage();
         BillingDetailsPage billingDetailsPage = new BillingDetailsPage();
-        BillingAddressLocatersPage billingAddressLocaters = new BillingAddressLocatersPage();
+        BillingAddressPage billingAddressLocaters = new BillingAddressPage();
         MyAccountPage myAccountPage = new MyAccountPage();
         RegistrationPage registrationPage = new RegistrationPage();
 
