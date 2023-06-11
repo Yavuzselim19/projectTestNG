@@ -52,5 +52,14 @@ public class ShoppingPage {
     @FindBy(xpath = "//*[.='Thank you. Your order has been received.']")
     public WebElement orderReceivedMessage;
 
+    @FindBy(xpath = "//button[@title='Minus']")
+    public WebElement minusButton;
+
+    @FindBy(xpath = "//button[@title='Plus']")
+    public WebElement plusButton;
+
+    @FindBy(name = "update_cart")
+    public WebElement updateCart;
+
 
 }

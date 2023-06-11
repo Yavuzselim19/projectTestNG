@@ -4,11 +4,10 @@ import myapp.pages.HomePage;
 import myapp.pages.RegistrationPage;
 import myapp.utilities.ConfigReader;
 import myapp.utilities.Driver;
-import myapp.utilities.ReusableMethods;
 import myapp.utilities.TestBase;
 import org.testng.annotations.Test;
 
-public class US_01_NegativeCustomerRegistration {
+public class US_01_CustomerRegistration_2_Negative {
     @Test
     public void customerInvalidRegistration(){
 
