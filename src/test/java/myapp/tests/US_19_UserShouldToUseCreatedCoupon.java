@@ -49,6 +49,8 @@ public class US_19_UserShouldToUseCreatedCoupon {
         billingDetailsPage.billingLastName.sendKeys("Akcakoyun");
         ReusableMethods.selectByValue(billingDetailsPage.billingCountryDropDown, "GB");
         billingDetailsPage.billingCity.sendKeys("Liverpool");
+        billingDetailsPage.billingAddress1.sendKeys();
+
 
         //The user should be able to view and select payment options.
 
