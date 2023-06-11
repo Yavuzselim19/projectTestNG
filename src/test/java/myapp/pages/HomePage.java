@@ -23,6 +23,7 @@ public class HomePage {
     @FindBy(xpath = "//span[.='Sign Out']")
     public WebElement signOut;
 
+
     @FindBy(linkText = "Log out")
     public WebElement logOut;
 
